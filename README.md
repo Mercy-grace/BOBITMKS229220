@@ -4,10 +4,12 @@ DevOps department at TechFundi which is  a recent venture-funded startup we have
 # Required Python packages and How to run 
 ```
 $ virtualenv env
-$ source venv/bin/activate
-(venv)$ pip install flask
-(venv)$ pip install mysql-connector-python
-(venv)$ pip install flask-mysqldb
-(venv)$ pip install flask-wtf
-(venv)$ pip install passlib
+$ source env/bin/activate
+(env)$ pip install flask
+(env)$ pip install mysql-connector-python
+(env)$ pip install flask-mysqldb
+(env)$ pip install flask-wtf
+(env)$ pip install passlib
+(env)$ python app.py
+
 ```
