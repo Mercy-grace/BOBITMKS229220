@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = '127.0.0.1'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'martdevelopers_ContactTracingApp'
+app.config['MYSQL_DB'] = 'ContactTracingApp'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)
@@ -170,7 +170,6 @@ def dashboard():
     cur = mysql.connection.cursor()
 
     # Get questionaires
-    # Show recently tracing inforation of logged in user
     result = cur.execute("SELECT * FROM questionaires WHERE name = %s", [session['username']])
     Responses = cur.fetchall()
     if result > 0:
